@@ -1,0 +1,31 @@
+{
+	"SP1": {
+		"prefix": "Snip1",
+		"body": [
+		  "<!DOCTYPE html>",
+		  "<!--Sinoi Bobojonzoda EKfu-23-->",
+		  "<html>",
+		  "    <head>",
+		  "    <meta charset=\"UTF-8\">",
+		  "        <title>",
+		  "            LW1 Site    ",
+		  "        </title>",
+		  "    </head>",
+		  "",
+		  "    <body>",
+		  "            <h1><b><u>Owner of the website</u></b></h1>",
+		  "            <p><i><b><h2>Sinoi Bobojonzoda</h2></b></i></p>",
+		  "            <h2><b><u> Computer engineer </u></b></h2>",
+		  "            <p><i>2nd year</i></p>",
+		  "            <p><b><u> Group </u></b></p>",
+		  "            <p><i> EKfu-23</i></p>",
+		  "            <p><b><u> Github </u></b></p>",
+		  "            <a href=\"https://github.com/Av1cenna\" target=\"_blank\"> Sinoi Bobojonzoda github </a>",
+		  "    </body>",
+		  "            ",
+		  "",
+		  "</html>"
+		],
+		"description": ""
+	  }
+	}
