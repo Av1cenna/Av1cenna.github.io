@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - Kelly Bootstrap Template</title>
+  <title>Portfolio - Avicenna LW</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/n7.png" rel="icon">
+  <link href="assets/img/n7.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,6 +27,103 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+  }
+  .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+      text-align: center;
+      color: #333;
+  }
+  .form-field {
+      margin-bottom: 20px;
+  }
+  .form-field label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .form-field input, .form-field textarea, .form-field select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+  }
+  .form-field select {
+      cursor: pointer;
+  }
+  .form-field button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .form-field button:hover {
+      background-color: #45a049;
+  }
+  .results {
+      margin-top: 30px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .results h2 {
+      margin-top: 0;
+  }
+  .average {
+      font-size: 1.5em;
+      font-weight: bold;
+  }
+
+  .math-container {
+      margin-top: 30px;
+      font-size: 18px;
+  }
+
+  .svg-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        @keyframes circleAnimation {
+            0% {
+                r: 60;
+                fill: yellow;
+            }
+            50% {
+                r: 90;
+                fill: lightgreen;
+            }
+            100% {
+                r: 60;
+                fill: yellow;
+            }
+        }
+
+        svg circle {
+            animation: circleAnimation 4s ease-in-out infinite;
+        }
+</style>
+
   <!-- =======================================================
   * Template Name: Kelly
   * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
@@ -34,6 +131,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body class="portfolio-page">
@@ -44,7 +142,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Kelly</h1>
+        <h1 class="sitename">Avicenna</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -54,23 +152,7 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -101,113 +183,119 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
+          <h1>Mathematical Expression Example</h1>
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+    <p>Here is the Cauchy Integral Formula:</p>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+    <!-- Mathematical Expression using MathML -->
+    <div class="math-container">
+        <h2>Cauchy Integral Formula</h2>
+        <h1>Mathematical Expression Example</h1>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+    <p>Here is the Cauchy Integral Formula:</p>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+    <!-- Mathematical Expression using MathML -->
+    <div class="math-container">
+        <h2>Cauchy Integral Formula</h2>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <!-- The <math> tag wraps the entire MathML expression -->
+          
+          <mrow>
+              <!-- <mrow> is used to group elements together -->
+      
+              <!-- f(a) on the left-hand side -->
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>a</mi>
+              <mo>)</mo>
+              <mo>&#xA0;</mo> <!-- Non-breaking space -->
+              <mo>=</mo>
+              <mo>&#xA0;</mo> <!-- Non-breaking space -->
+      
+              <!-- Fraction: 1 / (2πi) -->
+              <mfrac>
+                  <mn>1</mn> <!-- Numerator -->
+                  <mrow>
+                      <mn>2</mn>
+                      <mo>&#xA0;</mo> <!-- Non-breaking space -->
+                      <mi>&#x3c0;</mi> <!-- π (Pi) -->
+                      <mo>&#xA0;</mo> <!-- Non-breaking space -->
+                      <mi>i</mi> <!-- Imaginary unit -->
+                  </mrow> <!-- Denominator -->
+              </mfrac>
+      
+              <!-- Contour Integral symbol (∮) -->
+              <munderover accent="false" accentunder="false">
+                  <mo>&#x222e;</mo> <!-- Contour Integral symbol (∮) -->
+                  <mrow /> <!-- Empty row for upper limit -->
+                  <mrow /> <!-- Empty row for lower limit -->
+              </munderover>
+      
+              <!-- Fraction: f(z) / (z - a) -->
+              <mfrac>
+                  <mrow>
+                      <mi>f</mi>
+                      <mo>(</mo>
+                      <mi>z</mi>
+                      <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                      <mi>z</mi>
+                      <mo>-</mo>
+                      <mi>a</mi>
+                  </mrow>
+              </mfrac>
+      
+              <!-- Differential dz -->
+              <mi>d</mi>
+              <mi>z</mi>
+          </mrow>
+      
+      </math>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+     <!-- Animated SVG Graphic Example -->
+    <div class="svg-container">
+      <h2>Animated SVG: Circle inside a Square</h2>
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Square -->
+          <rect x="10" y="10" width="180" height="180" fill="lightblue" stroke="black" stroke-width="5" />
+          <!-- Animated Circle -->
+          <circle cx="100" cy="100" r="60" fill="yellow" stroke="black" stroke-width="5" />
+      </svg>
+  </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+  <div id="clock" class="clock"></div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+  <script>
+      // Function to get and format the current time
+      function updateTime() {
+          // Get the current time using the Date object
+          const now = new Date();
+          
+          // Extract hours, minutes, and seconds
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+          
+          // Format hours, minutes, and seconds with leading zeros if needed
+          hours = hours < 10 ? '0' + hours : hours;
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          
+          // Combine them into a time string
+          const timeString = `${hours}:${minutes}:${seconds}`;
+          
+          // Display the time in the HTML element
+          document.getElementById('clock').textContent = timeString;
+      }
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+      // Call the updateTime function every second (1000 milliseconds)
+      setInterval(updateTime, 1000);
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
+      // Initial call to display the time immediately when the page loads
+      updateTime();
+  </script>
+      
   </main>
 
   <footer id="footer" class="footer light-background">
