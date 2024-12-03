@@ -6,17 +6,16 @@ let toggleBtn = document.querySelector(".toggleBtn");
 rootEle.classList.add("light-background");
 toggleBtn.children[1].classList.add("displayNone");
 
-// Toggle mode function
+// Function to toggle between light and dark modes
 function modeToggle() {
-    // Toggle dark background and light background
+    
     rootEle.classList.toggle("dark-background");
     toggleBtn.classList.toggle("toggleBtnDarkMode");
 
-    // Toggle visibility of the lightbulb images
+   
     let lightbulbOff = toggleBtn.querySelector(".lightbulb-off");
     let lightbulbOn = toggleBtn.querySelector(".lightbulb-on");
 
-    lightbulbOff.classList.toggle("displayNone");
-    lightbulbOn.classList.toggle("displayNone");
+    lightbulbOff.classList.toggle("displayNone"); 
+    lightbulbOn.classList.toggle("displayNone");  
 }
-
