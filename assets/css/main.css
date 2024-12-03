@@ -1012,8 +1012,18 @@ section,
 }
 
 
-.toggleBtn{
-  position: center;
+/* These classes control the visibility of the lightbulb images */
+.displayNone {
+  display: none; /* Hides the element */
+}
+
+.displayBlock {
+  display: block; /* Shows the element */
+}
+
+/* Button Styling */
+.toggleBtn {
+  position: fixed;
   bottom: 30px;
   right: 45px;
   width: 70px;
@@ -1024,17 +1034,17 @@ section,
   border-radius: 12px;
   box-shadow: 0 1px 3px #222;
   z-index: 10;
-
 }
 
-.toggleBtn img{
-  position: center;
+.toggleBtn img {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-0%, -0%);
+  transform: translate(-50%, -50%);
   width: 72%;
   height: 72%;
 }
+
 
 .toggleBtnDarkMode{background: white;}
 .displayNone{display: none;}
