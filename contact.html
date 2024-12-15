@@ -140,6 +140,76 @@
       <p>© Copyright <strong>Avicenna</strong>. All Rights Reserved</p>
     </div>
   </footer>
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function () {
+      const numberRegex = /^\d+$/;
+
+      // Fetch Input Values
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const street = document.getElementById("street").value;
+      const city = document.getElementById("city").value;
+      const state = document.getElementById("state").value;
+      const zip = document.getElementById("zip").value;
+
+      // Validate Email
+      if (!email.includes("@")) {
+        alert("Enter a valid email address.");
+        return;
+      }
+
+      // Validate Phone and ZIP
+      if (!numberRegex.test(phone) || !numberRegex.test(zip)) {
+        alert("Phone and ZIP Code must contain only numbers.");
+        return;
+      }
+
+      // Validate Ratings
+      const ratings = [];
+      for (let i = 1; i <= 5; i++) {
+        const value = parseInt(document.getElementById(`q${i}`).value);
+        if (value < 1 || value > 10) {
+          alert(`Rating for Question ${i} must be between 1 and 10.`);
+          return;
+        }
+        ratings.push(value);
+      }
+
+      // Calculate Average Rating
+      const average = (ratings.reduce((a, b) => a + b) / 5).toFixed(2);
+      const colorClass =
+        average <= 3.4 ? "rating-red" : average <= 7.1 ? "rating-orange" : "rating-green";
+
+      // Concatenate Address
+      const fullAddress = `${street}, ${city}, ${state}, ${zip}`;
+
+      // Create Results Object
+      const resultsObject = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        address: fullAddress,
+        ratings,
+        averageRating: average,
+      };
+
+      // Log the object to the console
+      console.log("Form Results:", resultsObject);
+
+      // Display Results
+      document.getElementById("results").innerHTML = `
+        <strong>Results:</strong><br>
+        Name: ${firstName} ${lastName}<br>
+        Email: ${email}<br>
+        Phone: ${phone}<br>
+        Address: ${fullAddress}<br>
+        Average Rating: <span class="${colorClass}">${average}</span>
+      `;
+    });
+  </script>
 
   <!-- Script -->
   <script>
