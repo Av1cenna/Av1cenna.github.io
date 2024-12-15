@@ -13,243 +13,166 @@
   <link href="assets/img/n7.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .rating-red {
+      color: red;
+      font-weight: bold;
+    }
+    .rating-orange {
+      color: orange;
+      font-weight: bold;
+    }
+    .rating-green {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body class="contact-page">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Avicenna</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-
-    </div>
-  </header>
-
+  <!-- Main Content -->
   <main class="main">
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form id="contactForm" class="row g-3">
+        <!-- Name and Email Fields -->
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" id="firstName" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" id="lastName" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" id="phone" class="form-control" maxlength="15" required>
+        </div>
 
-    <div class="form-container">
-      <h1>Contact Form</h1>
-      <form id="contactForm">
-          <!-- Name and Email Fields -->
-          <div class="form-field">
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" required>
-          </div>
-          <div class="form-field">
-              <label for="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" required>
-          </div>
-          <div class="form-field">
-              <label for="email">Email Address:</label>
-              <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-field">
-              <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone">
-          </div>
+        <!-- Split Address Fields -->
+        <div class="col-12">
+          <label for="street" class="form-label">Street Address</label>
+          <input type="text" id="street" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+          <label for="city" class="form-label">City</label>
+          <input type="text" id="city" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <input type="text" id="state" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+          <label for="zip" class="form-label">ZIP Code</label>
+          <input type="text" id="zip" class="form-control" maxlength="5" required>
+        </div>
 
-          <!-- Address Fields (Separate for Street, City, State, and Zip) -->
-          <div class="form-field">
-              <label for="street">Street Address:</label>
-              <input type="text" id="street" name="street" required>
-          </div>
-          <div class="form-field">
-              <label for="city">City:</label>
-              <input type="text" id="city" name="city" required>
-          </div>
-          <div class="form-field">
-              <label for="state">State:</label>
-              <input type="text" id="state" name="state" required>
-          </div>
-          <div class="form-field">
-              <label for="zip">Zip Code:</label>
-              <input type="text" id="zip" name="zip" required>
-          </div>
+        <!-- 5 Rating Questions -->
+        <div class="col-12">
+          <label class="form-label">How satisfied are you with our website? (1-10)</label>
+          <input type="number" id="question1" class="form-control" min="1" max="10" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">How would you rate our customer service? (1-10)</label>
+          <input type="number" id="question2" class="form-control" min="1" max="10" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">How easy was it to navigate our website? (1-10)</label>
+          <input type="number" id="question3" class="form-control" min="1" max="10" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">How likely are you to recommend us? (1-10)</label>
+          <input type="number" id="question4" class="form-control" min="1" max="10" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">How satisfied are you with our product selection? (1-10)</label>
+          <input type="number" id="question5" class="form-control" min="1" max="10" required>
+        </div>
 
-          <!-- Rating Questions -->
-          <div class="form-field">
-              <label for="question1">How satisfied are you with our website?</label>
-              <select id="question1" name="question1" required>
-                  <option value="">Select a rating (1-10)</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-          </div>
-          <div class="form-field">
-              <label for="question2">How would you rate our customer service?</label>
-              <select id="question2" name="question2" required>
-                  <option value="">Select a rating (1-10)</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-          </div>
-          <div class="form-field">
-              <label for="question3">How likely are you to recommend us to a friend?</label>
-              <select id="question3" name="question3" required>
-                  <option value="">Select a rating (1-10)</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-          </div>
-          <div class="form-field">
-              <label for="question4">How easy was it to navigate our website?</label>
-              <select id="question4" name="question4" required>
-                  <option value="">Select a rating (1-10)</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-          </div>
-          <div class="form-field">
-              <label for="question5">How satisfied are you with our product selection?</label>
-              <select id="question5" name="question5" required>
-                  <option value="">Select a rating (1-10)</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-          </div>
-
-          <div class="form-field">
-             
-          </div>
+        <div class="col-12 text-center">
+          <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+        </div>
       </form>
 
-      <button onclick="submit()">Submit</button>
-  </div>
-
-  <div class="results" id="results"></div>
-
-  <!-- Link to external JavaScript file -->
-  <script src="script.js"></script>
+      <!-- Results Display -->
+      <div class="mt-4" id="results"></div>
+    </div>
   </main>
 
-  <footer id="footer" class="footer light-background">
+  <!-- Scripts -->
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      // Fetch values
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const numberRegex = /^\d+$/;
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelly</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const street = document.getElementById('street').value;
+      const city = document.getElementById('city').value;
+      const state = document.getElementById('state').value;
+      const zip = document.getElementById('zip').value;
 
-  </footer>
+      // Input validations
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      if (!numberRegex.test(phone)) {
+        alert("Phone number must contain only numbers.");
+        return;
+      }
+      if (!numberRegex.test(zip) || zip.length !== 5) {
+        alert("ZIP code must be exactly 5 digits and contain only numbers.");
+        return;
+      }
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      const questions = [];
+      for (let i = 1; i <= 5; i++) {
+        const value = parseInt(document.getElementById(`question${i}`).value);
+        if (value < 1 || value > 10) {
+          alert(`Please ensure that Question ${i} has a value between 1 and 10.`);
+          return;
+        }
+        questions.push(value);
+      }
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+      // Calculate average
+      const average = (questions.reduce((a, b) => a + b, 0) / 5).toFixed(2);
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      // Determine color for average
+      let ratingColor = 'rating-red';
+      if (average > 7.1) ratingColor = 'rating-green';
+      else if (average > 3.4) ratingColor = 'rating-orange';
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+      const fullAddress = `${street}, ${city}, ${state}, ${zip}`;
 
+      // Display results
+      document.getElementById('results').innerHTML = `
+        <strong>Results:</strong><br>
+        Name: ${firstName} ${lastName}<br>
+        Email: ${email}<br>
+        Phone: ${phone}<br>
+        Address: ${fullAddress}<br>
+        Average Rating: <span class="${ratingColor}">${average}</span>
+      `;
+    });
+  </script>
 </body>
 
 </html>
