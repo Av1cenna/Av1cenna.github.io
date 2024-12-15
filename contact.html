@@ -26,10 +26,12 @@
       color: red;
       font-weight: bold;
     }
+
     .rating-orange {
       color: orange;
       font-weight: bold;
     }
+
     .rating-green {
       color: green;
       font-weight: bold;
@@ -38,6 +40,26 @@
 </head>
 
 <body class="contact-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Avicenna</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
 
   <!-- Main Content -->
   <main class="main">
@@ -62,9 +84,9 @@
           <input type="text" id="phone" class="form-control" maxlength="15" required>
         </div>
 
-        <!-- Split Address Fields -->
+        <!-- Address Fields -->
         <div class="col-12">
-          <label for="street" class="form-label">Street Address</label>
+          <label for="street" class="form-label">Street</label>
           <input type="text" id="street" class="form-control" required>
         </div>
         <div class="col-md-4">
@@ -82,24 +104,24 @@
 
         <!-- 5 Rating Questions -->
         <div class="col-12">
-          <label class="form-label">How satisfied are you with our website? (1-10)</label>
-          <input type="number" id="question1" class="form-control" min="1" max="10" required>
+          <label class="form-label">Rate our website (1-10):</label>
+          <input type="number" id="q1" class="form-control" min="1" max="10" required>
         </div>
         <div class="col-12">
-          <label class="form-label">How would you rate our customer service? (1-10)</label>
-          <input type="number" id="question2" class="form-control" min="1" max="10" required>
+          <label class="form-label">Rate our customer service (1-10):</label>
+          <input type="number" id="q2" class="form-control" min="1" max="10" required>
         </div>
         <div class="col-12">
-          <label class="form-label">How easy was it to navigate our website? (1-10)</label>
-          <input type="number" id="question3" class="form-control" min="1" max="10" required>
+          <label class="form-label">Rate our product quality (1-10):</label>
+          <input type="number" id="q3" class="form-control" min="1" max="10" required>
         </div>
         <div class="col-12">
-          <label class="form-label">How likely are you to recommend us? (1-10)</label>
-          <input type="number" id="question4" class="form-control" min="1" max="10" required>
+          <label class="form-label">Rate website navigation (1-10):</label>
+          <input type="number" id="q4" class="form-control" min="1" max="10" required>
         </div>
         <div class="col-12">
-          <label class="form-label">How satisfied are you with our product selection? (1-10)</label>
-          <input type="number" id="question5" class="form-control" min="1" max="10" required>
+          <label class="form-label">Rate your overall satisfaction (1-10):</label>
+          <input type="number" id="q5" class="form-control" min="1" max="10" required>
         </div>
 
         <div class="col-12 text-center">
@@ -107,69 +129,72 @@
         </div>
       </form>
 
-      <!-- Results Display -->
+      <!-- Results -->
       <div class="mt-4" id="results"></div>
     </div>
   </main>
 
-  <!-- Scripts -->
+  <!-- Footer -->
+  <footer id="footer" class="footer light-background">
+    <div class="container text-center">
+      <p>© Copyright <strong>Avicenna</strong>. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
   <script>
-    document.getElementById('submitBtn').addEventListener('click', function () {
-      // Fetch values
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    document.getElementById("submitBtn").addEventListener("click", function () {
       const numberRegex = /^\d+$/;
 
-      const firstName = document.getElementById('firstName').value;
-      const lastName = document.getElementById('lastName').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const street = document.getElementById('street').value;
-      const city = document.getElementById('city').value;
-      const state = document.getElementById('state').value;
-      const zip = document.getElementById('zip').value;
+      // Fetch Input Values
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const street = document.getElementById("street").value;
+      const city = document.getElementById("city").value;
+      const state = document.getElementById("state").value;
+      const zip = document.getElementById("zip").value;
 
-      // Input validations
-      if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-      if (!numberRegex.test(phone)) {
-        alert("Phone number must contain only numbers.");
-        return;
-      }
-      if (!numberRegex.test(zip) || zip.length !== 5) {
-        alert("ZIP code must be exactly 5 digits and contain only numbers.");
+      // Validate Email
+      if (!email.includes("@")) {
+        alert("Enter a valid email address.");
         return;
       }
 
-      const questions = [];
+      // Validate Phone and ZIP
+      if (!numberRegex.test(phone) || !numberRegex.test(zip)) {
+        alert("Phone and ZIP Code must contain only numbers.");
+        return;
+      }
+
+      // Validate Ratings
+      const ratings = [];
       for (let i = 1; i <= 5; i++) {
-        const value = parseInt(document.getElementById(`question${i}`).value);
+        const value = parseInt(document.getElementById(`q${i}`).value);
         if (value < 1 || value > 10) {
-          alert(`Please ensure that Question ${i} has a value between 1 and 10.`);
+          alert(`Rating for Question ${i} must be between 1 and 10.`);
           return;
         }
-        questions.push(value);
+        ratings.push(value);
       }
 
-      // Calculate average
-      const average = (questions.reduce((a, b) => a + b, 0) / 5).toFixed(2);
+      // Calculate Average Rating
+      const average = (ratings.reduce((a, b) => a + b) / 5).toFixed(2);
+      const colorClass =
+        average <= 3.4 ? "rating-red" : average <= 7.1 ? "rating-orange" : "rating-green";
 
-      // Determine color for average
-      let ratingColor = 'rating-red';
-      if (average > 7.1) ratingColor = 'rating-green';
-      else if (average > 3.4) ratingColor = 'rating-orange';
-
+      // Concatenate Address
       const fullAddress = `${street}, ${city}, ${state}, ${zip}`;
 
-      // Display results
-      document.getElementById('results').innerHTML = `
+      // Display Results
+      document.getElementById("results").innerHTML = `
         <strong>Results:</strong><br>
         Name: ${firstName} ${lastName}<br>
         Email: ${email}<br>
         Phone: ${phone}<br>
         Address: ${fullAddress}<br>
-        Average Rating: <span class="${ratingColor}">${average}</span>
+        Average Rating: <span class="${colorClass}">${average}</span>
       `;
     });
   </script>
